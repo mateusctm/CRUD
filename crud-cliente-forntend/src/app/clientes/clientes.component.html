@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Endereço</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let clientes of clientes">
+      <td>{{ clientes.nome }}</td>
+      <td>{{ clientes.cpf }}</td>
+      <td>{{ clientes.endereco.logradouro }}</td>
+      <td>{{ clientes.telefone }}</td>
+      <td>{{ clientes.email }}</td>
+      <td>
+        <span class="float-right">
+          <button (click)="onEdit()">Atualizar</button>
+
+          <button (click)="onDelete()">Remover</button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
